@@ -24,7 +24,7 @@ a:hover{
 
 nav{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     align-items: center;
     font-family: "Poppins", sans-serif;
@@ -42,7 +42,7 @@ nav{
 }
 
 .darkmode_button_tittle{
-   font-size: 1.2vw; 
+   font-size: clamp(0.6rem, 1.3vw, 1rem);
    /* margin-bottom: 1vw; */
    font-family: "Poppins", sans-serif;
    color: #fff;
@@ -162,12 +162,6 @@ main{
   filter: brightness(1.2);
 }
 
-/* @media (max-width: 480px) {
-  .foto-principal {
-    display: none;
-  }
-} */
-
 .foto-principal{
     width: 25vw;
     max-width: 180px;
@@ -178,6 +172,15 @@ main{
     border: 4px solid #f08a24;
     max-width: 100%;
 }
+
+
+@media (max-width: 480px) {
+  .foto-principal {
+    width: 40vw;           /* maior que 25vw para celular */
+    max-width: 220px;      /* permite aumentar no celular */
+  }
+}
+
 
 /* Configurações do Main */
 
